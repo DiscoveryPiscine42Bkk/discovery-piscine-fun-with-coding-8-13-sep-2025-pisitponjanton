@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;     /* ขยายเต็มหน้าจอ */
+      height: 100%;    /* ขยายเต็มความสูง */
+    }
+    td {
+      text-align: center;
+      vertical-align: middle;
+      font-size: 2vw;   /* ปรับขนาดตามหน้าจอ */
+      font-weight: bold;
+      padding: 10px;
+    }
+    .first {
+      background-color: #b6cc70; /* เขียวอ่อน */
+      color: #333;
+    }
+    .second {
+      background-color: #f4b6a0; /* ชมพูส้ม */
+      color: #333;
+    }
+
+    /* สำหรับหน้าจอเล็ก (มือถือ) → ให้เซลล์ซ้อนกัน */
+    @media (max-width: 600px) {
+      table, tr, td {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      td {
+        font-size: 5vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <table border="1">
+    <tr>
+      <td class="first">First cell</td>
+      <td class="second">Second cell</td>
+    </tr>
+  </table>
+</body>
+</html>
