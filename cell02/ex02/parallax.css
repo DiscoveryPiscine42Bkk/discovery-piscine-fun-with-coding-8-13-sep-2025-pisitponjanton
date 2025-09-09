@@ -1,0 +1,50 @@
+/* Reset */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Parallax sections */
+.parallax {
+  height: 100vh; /* เต็มจอ */
+  background-attachment: fixed; /* key effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Background images */
+.bg1 {
+  background-image: url("https://picsum.photos/id/237/1600/900"); /* รูปแรก */
+}
+
+.bg2 {
+  background-image: url("https://picsum.photos/id/1025/1600/900"); /* รูปสอง */
+}
+
+/* Caption in center */
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* Middle section */
+.section {
+  height: 50vh;
+  text-align: center;
+  padding: 50px;
+}
+
+.black {
+  background-color: #000;
+  color: white;
+}
