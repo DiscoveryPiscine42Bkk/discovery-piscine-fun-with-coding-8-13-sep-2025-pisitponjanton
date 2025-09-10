@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>It's over 9000</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f4f4f4;
+    }
+    .calculator {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    input, select {
+      margin: 5px;
+      padding: 8px;
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      cursor: pointer;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    input[type="submit"]:hover {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="left" placeholder="Left operand">
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <input type="text" id="right" placeholder="Right operand">
+    <br>
+    <input type="submit" value="Try me!" onclick="calculate()">
+  </div>
+
+  <script>
+    function calculate() {
+      const left = document.getElementById("left").value.trim();
+      const right = document.getElementById("right").value.trim();
+      const operator = document.getElementById("operator").value;
+
+      // ตรวจสอบตัวเลข
+      if (!/^\d+$/.test(left) || !/^\d+$/.test(right)) {
+        alert("Error :(");
+        console.log("Error :(");
+        return;
+      }
+
+      const a = parseInt(left, 10);
+      const b = parseInt(right, 10);
+      let result;
+
+      // ห้ามหารหรือ modulo ด้วย 0
+      if ((operator === "/" || operator === "%") && b === 0) {
+        alert("It's over 9000!");
+        console.log("It's over 9000!");
+        return;
+      }
+
+      switch (operator) {
+        case "+": result = a + b; break;
+        case "-": result = a - b; break;
+        case "*": result = a * b; break;
+        case "/": result = Math.floor(a / b); break;
+        case "%": result = a % b; break;
+      }
+
+      alert("Result: " + result);
+      console.log("Result: " + result);
+    }
+
+    // Popup ทุก 30 วิ
+    setInterval(() => {
+      alert("Please, use me...");
+    }, 30000);
+  </script>
+</body>
+</html>
