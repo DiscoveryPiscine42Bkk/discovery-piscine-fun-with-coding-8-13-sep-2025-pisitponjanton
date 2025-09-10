@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 300px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: center;
+  padding: 10px;
+  border: none; /* invisible table */
+}
+
+.profile-pic img {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+
+.login {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.desc {
+  color: #777;
+  font-size: 14px;
+}
+
+.location {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.socials img {
+  width: 24px;
+  margin: 0 5px;
+}
+
+.button button {
+  width: 100%;
+  padding: 12px;
+  background: #000;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button button:hover {
+  background: #333;
+}
